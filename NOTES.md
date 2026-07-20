@@ -65,3 +65,14 @@ No copy or layout was changed, only the missing wrapper was added.
 No copy or layout was changed.
 
 **Re-paste:** module 5 only, into its Custom HTML module in the HubSpot page editor.
+
+## Round 5 (2026-07-20)
+
+**File:** `modules/module-03-capabilities-grid.html` (Capabilities Grid, 8 services)
+
+- **Fonts:** same missing-wrapper bug as modules 4 and 5 — the outer `<section class="aih-svc-section">` wasn't inside `<div class="applied-landing-page">`, so the shared din-2014 rule couldn't reach it. Added the wrapper.
+- **Colors / buttons:** no inline colors or buttons in this module, no changes applicable. Everything (`.eyebrow`, `.lead`, `h2`/`h3`, `.aih-svc-card`, the `.aih-svc-card--navy` variant, `.aih-svc-card-highlight`) is class-driven and styled in HEAD.html, which isn't available to audit — flagging rather than assuming, same as modules 3 and 4. Worth a specific check once HEAD.html is available: the `--navy` card variant should only use navy as a background/border/accent, never as text color, per the handout.
+
+No copy or layout was changed.
+
+**Re-paste:** module 3 only, into its Custom HTML module in the HubSpot page editor.
