@@ -35,3 +35,14 @@ No copy, layout, animation, or video/script behavior was changed.
 No copy, layout, or animation was changed.
 
 **Re-paste:** module 2 only, into its Custom HTML module in the HubSpot page editor.
+
+## Round 3 (2026-07-20)
+
+**File:** `modules/module-04-spec-to-ship.html` (From Spec to Ship, 4-step process)
+
+- **Fonts:** this module's outermost element (`<section class="aih-process-section">`) was NOT wrapped in `<div class="applied-landing-page">`. Per the handout (section 2b), the shared din-2014 font rule only reaches elements inside that scope wrapper, so this module would have rendered in HubSpot's default theme font regardless of what HEAD.html's CSS says. Added the wrapper div around the module.
+- **Colors / buttons:** this module has no inline styles, colors, or buttons at all, everything (`.eyebrow`, `.lead`, `h2`, `h3`, `.aih-process-step-number`, etc.) is class-driven and styled entirely in HEAD.html. I don't have HEAD.html's CSS to inspect, so I can't verify whether those classes currently produce a teal eyebrow, black heading, and din-2014 body text, or need correction. Flagging this rather than assuming — if HEAD.html source is available, send it and I'll audit those rules too.
+
+No copy or layout was changed, only the missing wrapper was added.
+
+**Re-paste:** module 4 only, into its Custom HTML module in the HubSpot page editor.
