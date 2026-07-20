@@ -76,3 +76,11 @@ No copy or layout was changed.
 No copy or layout was changed.
 
 **Re-paste:** module 3 only, into its Custom HTML module in the HubSpot page editor.
+
+## Round 6 (2026-07-20)
+
+**File:** `modules/module-03-capabilities-grid.html` (Capabilities Grid, 8 services)
+
+- Removed the `<div class="aih-svc-card-icon">…</div>` emoji icon from all 8 service cards, per request. No other content, layout, or styling changed.
+
+**Re-paste:** module 3 only, into its Custom HTML module in the HubSpot page editor.
