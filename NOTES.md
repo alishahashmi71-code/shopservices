@@ -46,3 +46,22 @@ No copy, layout, or animation was changed.
 No copy or layout was changed, only the missing wrapper was added.
 
 **Re-paste:** module 4 only, into its Custom HTML module in the HubSpot page editor.
+
+## Round 4 (2026-07-20)
+
+**File:** `modules/module-05-nahad-certified.html` (NAHAD Certified Fabricators)
+
+- **Fonts:** same missing-wrapper bug as module 4 — the outer `<section>` wasn't inside `<div class="applied-landing-page">`, so the shared din-2014 rule couldn't reach it. Added the wrapper. Also added the explicit din-2014 stack to the CTA button (base button rule: set explicitly, don't rely on inheritance).
+- **Colors:** the section background gradient used `#eaeaea`, which isn't in the approved gray ramp; corrected to the nearest approved value, `#eeeeee` (gray-200). `#f5f5f5` was already correct.
+- **Buttons ("Talk to an Expert"):**
+  - `font-weight: 800` → `700`. This is the exact bug called out in the handout: the Typekit kit has no 800 weight, so an 800 button falls all the way back to Helvetica instead of DIN 2014.
+  - Added the missing `border: 2px solid #007b85` (every button needs a border per the base rules).
+  - Added `line-height: 1.5`.
+  - Changed `transition` from `all 0.3s ease` to `all 0.25s ease`.
+  - Hover handler now also sets `border-color` to `#005662` (and mouseout resets it), so the border moves with the fill instead of being left behind.
+  - Normalized `background` shorthand to `background-color` to match the other buttons on the page. Glow value (`0 6px 18px @0.40`) was already correct for a non-hero button, no change needed there.
+- Left `.aih-nahad-split`, `.aih-nahad-image`, `.aih-nahad-badge`, `.aih-nahad-content`, `.eyebrow`, `h2`, `.body`, `.aih-nahad-list` untouched — class-driven, styled in HEAD.html, not available to audit.
+
+No copy or layout was changed.
+
+**Re-paste:** module 5 only, into its Custom HTML module in the HubSpot page editor.
