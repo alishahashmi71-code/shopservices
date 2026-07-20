@@ -92,3 +92,11 @@ No copy or layout was changed.
 - Restored the icon on all 8 cards, per request, but made them less colorful: added an inline `filter: grayscale(70%) opacity(0.85);` to each `.aih-svc-card-icon` div. Emoji glyphs render their own built-in colors and ignore CSS `color`, so a CSS filter is the only way to mute them without swapping in monochrome icon assets (which weren't provided). No other content, layout, or styling changed.
 
 **Re-paste:** module 3 only, into its Custom HTML module in the HubSpot page editor.
+
+## Round 8 (2026-07-20)
+
+**File:** `modules/module-03-capabilities-grid.html` (Capabilities Grid, 8 services)
+
+- Reverted Round 7: removed the `filter: grayscale(70%) opacity(0.85);` from all 8 `.aih-svc-card-icon` divs, per request, so the icons render in their original full color again. No other content, layout, or styling changed.
+
+**Re-paste:** module 3 only, into its Custom HTML module in the HubSpot page editor.
