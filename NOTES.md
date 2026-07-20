@@ -21,3 +21,17 @@ Brought the module in line with `AppliedLandingPageStyleHandout`:
 No copy, layout, animation, or video/script behavior was changed.
 
 **Re-paste:** module 1 only, into its Custom HTML module in the HubSpot page editor. No HEAD.html or FOOTER.html changes were made in this round.
+
+## Round 2 (2026-07-20)
+
+**File:** `modules/module-02-what-you-get.html` (What You Get from an Applied Hose Shop)
+
+- **Fonts:** added the explicit din-2014 stack to every inline-styled text element (eyebrow, h2, description paragraph, and each of the 7 checklist `<li><span>` items) — none had a font-family declared before.
+- **Colors:** the description paragraph used `#444444`, which isn't in the approved gray ramp; corrected to the nearest approved value, `#424242` (gray-800). Eyebrow teal (`#007b85`) and heading/list black (`#000000`) were already correct.
+- **Weight:** normalized the h2 from `font-weight: bold` to the explicit `700` for consistency with module 1.
+- **Buttons:** none in this module, no changes applicable.
+- Left the class-based elements (`aih-overview-badge`, `aih-overview-subhead`, `aih-overview-list`, `aih-overview-image-wrap`, `aih-overview-image-badge`, `aih-overview-image-stat`, `aih-overview-callout`) untouched — their styling lives in HEAD.html, which is outside this round's scope and wasn't provided.
+
+No copy, layout, or animation was changed.
+
+**Re-paste:** module 2 only, into its Custom HTML module in the HubSpot page editor.
